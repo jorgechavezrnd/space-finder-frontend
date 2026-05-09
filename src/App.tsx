@@ -2,6 +2,10 @@ import { useState } from 'react';
 import './App.css'
 import { Outlet, RouterProvider, createBrowserRouter } from 'react-router-dom';
 import NavBar from './components/NavBar';
+import { AuthService } from './services/AuthService';
+import LoginComponent from './components/LoginComponent';
+
+const authService = new AuthService();
 
 function App() {
   const [userName, setUserName] = useState<string | undefined>(undefined);
@@ -23,7 +27,7 @@ function App() {
         },
         {
           path: "/login",
-          element: <div>Login page</div>,
+          element: <LoginComponent authService={authService} setUserNameCb={setUserName} />,
         },
         {
           path: "/profile",
