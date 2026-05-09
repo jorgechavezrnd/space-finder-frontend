@@ -26,8 +26,6 @@ export default function CreateSpace({ dataService }: CreateSpaceProps) {
     } else {
       setActionResult('Please provide a name and a location!')
     }
-
-    
   };
 
   function setPhotoUrl(event: CustomEvent){
