@@ -22,7 +22,7 @@ npm run build
 
 ### 2. Deploy to AWS
 
-From the `space-finder` folder, run:
+From the [`space-finder`](https://github.com/jorgechavezrnd/space-finder) folder, run:
 
 ```bash
 cdk deploy UIDeploymentStack
