@@ -22,6 +22,14 @@ export class AuthService {
   private jwtToken: string | undefined;
   private temporaryCredentials: object | undefined;
 
+  public isAuthorized() {
+    if (this.user) {
+      return true;
+    }
+
+    return false;
+  }
+
   public async login(userName: string, password: string): Promise<Object | undefined> {
     try {
       const signInOutput: SignInOutput = await signIn({
